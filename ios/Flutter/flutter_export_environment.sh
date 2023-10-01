@@ -3,6 +3,7 @@
 export "FLUTTER_ROOT=/Users/husam/Developer/flutter"
 export "FLUTTER_APPLICATION_PATH=/Users/husam/Documents/Flutter Docs/Packages/app_ui_kit"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
+export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=0.0.1"
 export "FLUTTER_BUILD_NUMBER=0.0.1"

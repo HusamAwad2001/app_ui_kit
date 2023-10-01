@@ -15,6 +15,7 @@ class AppButton extends StatelessWidget {
       this.fontSize = 14,
       required this.onTap,
       this.icon,
+      this.textStyle,
       this.isIconEnd = false,
       this.iconSpacing = 10});
 
@@ -32,6 +33,7 @@ class AppButton extends StatelessWidget {
   final Widget? icon;
   final bool isIconEnd;
   final double iconSpacing;
+  final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +60,7 @@ class AppButton extends StatelessWidget {
                     ),
           Text(
             label,
-            style:
+            style: textStyle ??
                 TextStyle(color: textColor ?? Colors.white, fontSize: fontSize),
           ),
           !isIconEnd
