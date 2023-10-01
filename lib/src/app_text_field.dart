@@ -19,6 +19,7 @@ class AppTextField extends StatelessWidget {
       this.cursorColor,
       this.textColor,
       this.suffix,
+      this.hintStyle,
       this.maxLines = 1,
       this.minLines = 1,
       this.maxLength = 255});
@@ -42,6 +43,7 @@ class AppTextField extends StatelessWidget {
   final int maxLines;
   final int minLines;
   final int maxLength;
+  final TextStyle? hintStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +61,7 @@ class AppTextField extends StatelessWidget {
       style: TextStyle(color: textColor ?? Colors.black),
       cursorColor: hintColor ?? Theme.of(context).primaryColor,
       decoration: InputDecoration(
-          hintStyle: TextStyle(color: hintColor ?? Colors.grey),
+          hintStyle: hintStyle ?? TextStyle(color: hintColor ?? Colors.grey),
           hintText: label,
           counter: const SizedBox.shrink(),
           enabledBorder: OutlineInputBorder(
