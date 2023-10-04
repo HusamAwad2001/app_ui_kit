@@ -54,7 +54,7 @@ class AppTextField extends StatelessWidget {
     return TextField(
       obscureText: isPassword,
       enabled: isEnabled,
-      onTap: onTap,
+      onTap: (isEnabled ?? true) ? () {} : onTap,
       maxLines: isPassword ? 1 : maxLines,
       minLines: isPassword ? 1 : minLines,
       maxLength: maxLength,
