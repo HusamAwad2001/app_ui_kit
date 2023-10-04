@@ -76,6 +76,9 @@ class AppTextField extends StatelessWidget {
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
               borderSide: BorderSide(color: Theme.of(context).primaryColor)),
+          disabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
+              borderSide: BorderSide(color: borderColor ?? Colors.transparent)),
           filled: true,
           prefixIcon: prefix == null
               ? const SizedBox()
