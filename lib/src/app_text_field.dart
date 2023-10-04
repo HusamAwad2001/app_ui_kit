@@ -7,6 +7,7 @@ class AppTextField extends StatelessWidget {
       this.backgroundColor,
       this.borderRadius = 10,
       this.borderColor,
+      this.isEnabled,
       this.focusedBorderColor,
       this.isPassword = false,
       this.textEditingController,
@@ -19,6 +20,7 @@ class AppTextField extends StatelessWidget {
       this.cursorColor,
       this.textColor,
       this.suffix,
+      this.onTap,
       this.hintStyle,
       this.maxLines = 1,
       this.minLines = 1,
@@ -44,11 +46,15 @@ class AppTextField extends StatelessWidget {
   final int minLines;
   final int maxLength;
   final TextStyle? hintStyle;
+  final bool? isEnabled;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       obscureText: isPassword,
+      enabled: isEnabled,
+      onTap: onTap,
       maxLines: isPassword ? 1 : maxLines,
       minLines: isPassword ? 1 : minLines,
       maxLength: maxLength,
