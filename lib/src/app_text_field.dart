@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AppTextField extends StatelessWidget {
   const AppTextField(
@@ -22,6 +23,7 @@ class AppTextField extends StatelessWidget {
       this.suffix,
       this.onTap,
       this.hintStyle,
+      this.inputFormatters,
       this.maxLines = 1,
       this.minLines = 1,
       this.maxLength = 255});
@@ -47,6 +49,7 @@ class AppTextField extends StatelessWidget {
   final int maxLength;
   final TextStyle? hintStyle;
   final bool? isEnabled;
+  final List<TextInputFormatter>? inputFormatters;
   final Function()? onTap;
 
   @override
@@ -62,6 +65,7 @@ class AppTextField extends StatelessWidget {
         controller: textEditingController ?? TextEditingController(),
         textInputAction: textInputAction,
         keyboardType: textInputType,
+        inputFormatters: inputFormatters,
         onTapOutside: (_) {
           FocusManager.instance.primaryFocus?.unfocus();
         },
