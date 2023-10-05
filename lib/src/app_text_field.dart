@@ -55,7 +55,8 @@ class AppTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (isEnabled ?? true) ? () {} : onTap,
+      // onTap: (isEnabled ?? true) ? () {} : onTap,
+      onTap: onTap,
       child: TextField(
         obscureText: isPassword,
         enabled: isEnabled,
